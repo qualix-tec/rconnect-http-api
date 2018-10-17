@@ -27,7 +27,7 @@ Todas as requisições feitas pela API requerem que o usuário esteja autenticad
 
 Abaixo está um template da URL utilizado pela API:
 
-`<VERBO> /qualix/api/crud/:acao/[:id]?ds={persistencia}`
+`<VERBO> /qualix/rconnect/api/crud/:acao/[:id]?ds={persistencia}`
 
 Aonde:
 
@@ -58,7 +58,7 @@ As operações são endereços que fazem parte da API para realizar determinadas
 
 Retorna o objeto a partir do id fornecido.
 
-> __Formato:__ `GET /api/qualix/crud/:id?ds={persistencia}&d={profundidade}`
+> __Formato:__ `GET /qualix/rconnect/api/crud/:id?ds={persistencia}&d={profundidade}`
 
 No momento as consultas estão limitadas por ID.
 
@@ -70,7 +70,7 @@ O parâmetro `{profundidade}` existe somente para leitura, este parâmetro repre
 
 Cria um novo registro no banco a partir do payload fornecido.
 
-> __Formato:__ `POST /api/qualix/crud/create?ds={persistencia}`
+> __Formato:__ `POST /qualix/rconnect/api/crud/create?ds={persistencia}`
 
 Retorna um objeto com a propriedade `__id__` representando o id do novo registro criado.
 
@@ -78,7 +78,7 @@ Retorna um objeto com a propriedade `__id__` representando o id do novo registro
 
 Atualiza um registro a partir do `:id` fornecido. Se o id não existir, um erro é retornado.
 
-> __Formato:__ `PUT /api/qualix/crud/update/:id`
+> __Formato:__ `PUT /qualix/rconnect/api/crud/update/:id`
 
 Retorna um objeto com a propriedade `__id__` representando o id do registro atualizado.
 
@@ -86,7 +86,7 @@ Retorna um objeto com a propriedade `__id__` representando o id do registro atua
 
 Exclui um registro do banco a partir do `:id` fornecido. Se o id não existir, um erro é retornado.
 
-> __Formato:__ `DELETE /api/qualix/crud/delete/:id`
+> __Formato:__ `DELETE /qualix/rconnect/api/crud/delete/:id`
 
 Retorna um objeto com a propriedade `deleted` com valor `true` caso a operação tenha sucedido.
 
@@ -94,7 +94,7 @@ Retorna um objeto com a propriedade `deleted` com valor `true` caso a operação
 
 Cria ou atualiza um novo registro. A atualização depende do parâmetro `:id` em que caso o seu valor não seja encontrado, um novo registro é criado e este valor é ignorado.
 
-> __Formato:__ `POST /api/qualix/crud/upsert/:id`
+> __Formato:__ `POST qualix/rconnect/api/qualix/crud/upsert/:id`
 
 Assim como a operação `update`, esta operação exige um payload com os campos a serem atualizados.
 
@@ -106,7 +106,7 @@ Retorna um objeto com a propriedade `__id__` representando o id do registro cria
 
 Cria ou atualiza mais de um registro, diferente das operações `create`, `upsert` e `update`, esta operação deve receber um array de objetos, cada objeto deve conter um `__id__`, que caso não esteja presente resulta em um novo registro sendo criado com as propriedades do objeto decorrente.
 
->  __Formato:__ `POST /api/qualix/crud/bulk/upsert`
+>  __Formato:__ `POST qualix/rconnect/api/crud/bulk/upsert`
 
 Retorna um array de objetos representando sucesso ou erro.
 
@@ -115,7 +115,7 @@ Retorna um array de objetos representando sucesso ou erro.
 
 Em adição às operações, também existe uma forma de visualizar quais propriedades compõem uma class/tabela.
 
-> __Formato:__ `POST api/qualix/schemas/:persistencia`
+> __Formato:__ `POST qualux/rconnect/api/schemas/:persistencia`
 
 Aonde `:persistencia` pode ser o nome de uma classe no sistema. Por exemplo: `QualixInt.PedPendentes`.
 
