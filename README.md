@@ -44,7 +44,7 @@ Para requisições do tipo `create`, `update`, `upsert` ou `bulk/upsert`, um [pa
 
 ### O parâmetro \_\_id\_\_
 
-Para a API de integração, este parâmetro é especial, pois ele representa o `ID` do registro no banco. É ele quem auxilia ao banco a alterar um registro ou criar um novo. Este parâmetro pode ser utilizado de duas formas:
+Para a API de integração, este parâmetro é especial, pois ele representa o `ID` do registro no banco. É ele quem auxilia o banco a alterar um registro ou criar um novo. Este parâmetro pode ser utilizado de duas formas:
 
 A. Para operações de inserção/inserção condicionada/alteração/criação em massa, ele é utilizado dentro do payload. Exemplo: `{ "__id__": 1, "nome": "John Doe" }` vai informar o banco para utilizar o id 1 e atualizar o campo `nome` ao invés de criar um novo registro.
 
