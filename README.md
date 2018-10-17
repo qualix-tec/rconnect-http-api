@@ -82,7 +82,7 @@ Atualiza um registro a partir do `:id` fornecido. Se o id não existir, um erro 
 
 Retorna um objeto com a propriedade `__id__` representando o id do registro atualizado.
 
-### Exclusão (delete)
+#### Exclusão (delete)
 
 Exclui um registro do banco a partir do `:id` fornecido. Se o id não existir, um erro é retornado.
 
@@ -102,7 +102,7 @@ Retorna um objeto com a propriedade `__id__` representando o id do registro cria
 
 > __NOTA:__ Apesar de ser possível utilizar a operação `create` em conjunto com o parâmetro `__id__` para simular o mesmo efeito dessa operação, ainda é recomendado o uso de `upsert` devido a validações adicionais e questões de legibilidade.
 
-### Inserção em massa (bulk upsert)
+#### Inserção em massa (bulk upsert)
 
 Cria ou atualiza mais de um registro, diferente das operações `create`, `upsert` e `update`, esta operação deve receber um array de objetos, cada objeto deve conter um `__id__`, que caso não esteja presente resulta em um novo registro sendo criado com as propriedades do objeto decorrente.
 
