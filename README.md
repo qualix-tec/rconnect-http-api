@@ -110,12 +110,14 @@ Cria ou atualiza mais de um registro, diferente das operações `create`, `upser
 
 Retorna um array de objetos representando sucesso ou erro.
 
+> __NOTA__: Retorna 
+
 
 ### Esquema
 
 Em adição às operações, também existe uma forma de visualizar quais propriedades compõem uma class/tabela.
 
-> __Formato:__ `POST qualux/rconnect/api/schemas/:persistencia`
+> __Formato:__ `POST qualix/rconnect/api/schemas/:persistencia`
 
 Aonde `:persistencia` pode ser o nome de uma classe no sistema. Por exemplo: `QualixInt.PedPendentes`.
 
