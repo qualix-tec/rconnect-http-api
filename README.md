@@ -21,7 +21,7 @@ Após feita a instalação, a utilização da API depende de alguns requisitos q
 
 ### Autenticação
 
-Todas as requisições feitas pela API requerem que o usuário esteja autenticado. Para isso, no cabeçalho `Authorization` da requisição, insira o usuário e a senha fornecido pela Qualix, no formato [Basic](https://pt.stackoverflow.com/a/256521).
+Todas as requisições feitas pela API requerem que o usuário esteja autenticado. Para isso, no cabeçalho `Authorization` da requisição, insira o usuário e a senha fornecidos pela Qualix, no formato [Basic](https://pt.stackoverflow.com/a/256521).
 
 ### Formato da URL
 
